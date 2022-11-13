@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^7.6.6",
+    "moment": "^2.29.4",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
+    "@types/styled-components": "^5.1.26",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "next": "13.0.3",
