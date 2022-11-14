@@ -2,10 +2,12 @@ import React, { startTransition } from "react";
 import { useDispathCurrentTime } from "./controller/CurrentTimeController";
 import { useDispathDuration } from "./controller/DurationController";
 import { usePlayerProps } from "./controller/PropsController";
+import { useDispatchVolume } from "./controller/VolumeController";
 
 function AudioController() {
   const dispatchDuration = useDispathDuration();
   const dispatchCurrentTime = useDispathCurrentTime();
+  const dispatchVolume = useDispatchVolume();
   const { url } = usePlayerProps();
   return (
     <>
@@ -27,6 +29,7 @@ function AudioController() {
         }}
         preload={"auto"}
         onPlay={({ currentTarget }) => {
+          dispatchVolume(currentTarget.volume);
           dispatchDuration(currentTarget.duration);
         }}
         src={url}
