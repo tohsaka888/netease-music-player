@@ -2,11 +2,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Demo
 
-[![CodeFactor](https://www.codefactor.io/repository/github/tohsaka888/react-knowledge-graph/badge?style=flat-square)](https://www.codefactor.io/repository/github/tohsaka888/react-knowledge-graph)
-[![GitHub Release Date](https://img.shields.io/github/release-date/tohsaka888/react-knowledge-graph.svg?style=flat-square)](https://github.com/tohsaka888/react-knowledge-graph/releases)
-[![npm package](https://img.shields.io/npm/v/react-knowledge-graph.svg?style=flat-square)](https://www.npmjs.org/package/react-knowledge-graph)
-[![NPM downloads](http://img.shields.io/npm/dm/react-knowledge-graph.svg?style=flat-square)](https://npmjs.org/package/react-knowledge-graph)
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/tohsaka888/react-knowledge-graph/blob/master/LICENSE)
+[![CodeFactor](https://www.codefactor.io/repository/github/tohsaka888/netease-music-player/badge?style=flat-square)](https://www.codefactor.io/repository/github/tohsaka888/netease-music-player)
+[![GitHub Release Date](https://img.shields.io/github/release-date/tohsaka888/netease-music-player.svg?style=flat-square)](https://github.com/tohsaka888/netease-music-player/releases)
+[![npm package](https://img.shields.io/npm/v/netease-music-player.svg?style=flat-square)](https://www.npmjs.org/package/netease-music-player)
+[![NPM downloads](http://img.shields.io/npm/dm/netease-music-player.svg?style=flat-square)](https://npmjs.org/package/netease-music-player)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/tohsaka888/netease-music-player/blob/master/LICENSE)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 https://user-images.githubusercontent.com/58759688/201613972-351dd14b-175b-4bf4-8e3f-b9b108768002.mp4
