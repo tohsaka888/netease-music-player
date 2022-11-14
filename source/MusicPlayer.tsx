@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ActiveArea,
@@ -24,7 +24,16 @@ function ContextProvider({ children }: { children: React.ReactNode }) {
 }
 
 function MusicPlayer(props: MusicPlayerProps) {
-  const [isActive, setIsActive] = useState<boolean>(true);
+  const [isActive, setIsActive] = useState<boolean>(false);
+  const [isLocked, setIsLocked] = useState<boolean>(false);
+
+  const bottom = useMemo(() => {
+    if (isLocked) {
+      return "0px";
+    } else {
+      return isActive ? "0px" : "-45px";
+    }
+  }, [isLocked, isActive]);
   return (
     <PropsController {...props}>
       <motion.div
@@ -35,7 +44,7 @@ function MusicPlayer(props: MusicPlayerProps) {
           bottom: "-45px",
         }}
         animate={{
-          bottom: isActive ? "0px" : "-45px",
+          bottom: bottom,
         }}
         transition={{
           bounce: 0,
@@ -66,8 +75,24 @@ function MusicPlayer(props: MusicPlayerProps) {
           onMouseOver={() => {
             setIsActive(true);
           }}
+          onMouseLeave={(event) => {
+            if (
+              event.clientY <
+              (event.target as HTMLDivElement).getBoundingClientRect().top
+            ) {
+              setIsActive(false);
+            }
+          }}
         >
-          <LockedIcon />
+          <LockedIcon
+            isLocked={isLocked}
+            onClick={() => {
+              setIsLocked(!isLocked);
+              if (isLocked) {
+                setIsActive(false);
+              }
+            }}
+          />
         </LeftContainer>
         <RightBackground />
       </motion.div>
