@@ -17,23 +17,28 @@ import PropsController from "./controller/PropsController";
 import VolumeVisivbleController, {
   useVolumeVisible,
 } from "./controller/VolumeVisivbleController";
+import VolumeController from "./controller/VolumeController";
 
-function ContextProvider({ children }: { children: React.ReactNode }) {
+function ContextProvider(props: MusicPlayerProps) {
   return (
-    <DurationController>
-      <CurrentTimeController>
-        <VolumeVisivbleController>{children}</VolumeVisivbleController>
-      </CurrentTimeController>
-    </DurationController>
+    <PropsController {...props}>
+      <DurationController>
+        <CurrentTimeController>
+          <VolumeVisivbleController>
+            <VolumeController>
+              <MusicPlayer />
+            </VolumeController>
+          </VolumeVisivbleController>
+        </CurrentTimeController>
+      </DurationController>
+    </PropsController>
   );
 }
 
-function MusicPlayer(props: MusicPlayerProps) {
+function MusicPlayer() {
   const [isActive, setIsActive] = useState<boolean>(false);
   const [isLocked, setIsLocked] = useState<boolean>(false);
   const volumeVisible = useVolumeVisible();
-
-  console.log(volumeVisible)
 
   const bottom = useMemo(() => {
     if (volumeVisible) {
@@ -48,69 +53,57 @@ function MusicPlayer(props: MusicPlayerProps) {
   }, [volumeVisible, isLocked, isActive]);
 
   return (
-    <PropsController {...props}>
-      <motion.div
-        initial={{
-          position: "fixed",
-          width: "100%",
-          height: "53px",
-          bottom: "-45px",
+    <motion.div
+      initial={{
+        position: "fixed",
+        width: "100%",
+        height: "53px",
+        bottom: "-45px",
+      }}
+      animate={{
+        bottom: bottom,
+      }}
+      transition={{
+        bounce: 0,
+      }}
+      onMouseLeave={(event) => {
+        if (
+          event.clientY <
+          (event.target as HTMLDivElement).getBoundingClientRect().top
+        ) {
+          setIsActive(false);
+        }
+      }}
+    >
+      <ActiveArea
+        onMouseOver={() => {
+          setIsActive(true);
         }}
-        animate={{
-          bottom: bottom,
-        }}
-        transition={{
-          bounce: 0,
+      />
+      <MainBackground />
+      <MusicPlayerContainer style={{ color: "#fff" }}>
+        <AudioController />
+        <ControlPanel />
+      </MusicPlayerContainer>
+
+      <LeftContainer
+        onMouseOver={() => {
+          setIsActive(true);
         }}
       >
-        <ActiveArea
-          onMouseOver={() => {
-            setIsActive(true);
-          }}
-          onMouseLeave={(event) => {
-            if (
-              event.clientY <
-              (event.target as HTMLDivElement).getBoundingClientRect().top
-            ) {
+        <LockedIcon
+          isLocked={isLocked}
+          onClick={() => {
+            setIsLocked(!isLocked);
+            if (isLocked) {
               setIsActive(false);
             }
           }}
         />
-        <MainBackground />
-        <MusicPlayerContainer style={{ color: "#fff" }}>
-          <ContextProvider>
-            <AudioController />
-            <ControlPanel />
-          </ContextProvider>
-        </MusicPlayerContainer>
-
-        <LeftContainer
-          onMouseOver={() => {
-            setIsActive(true);
-          }}
-          onMouseLeave={(event) => {
-            if (
-              event.clientY <
-              (event.target as HTMLDivElement).getBoundingClientRect().top
-            ) {
-              setIsActive(false);
-            }
-          }}
-        >
-          <LockedIcon
-            isLocked={isLocked}
-            onClick={() => {
-              setIsLocked(!isLocked);
-              if (isLocked) {
-                setIsActive(false);
-              }
-            }}
-          />
-        </LeftContainer>
-        <RightBackground />
-      </motion.div>
-    </PropsController>
+      </LeftContainer>
+      <RightBackground />
+    </motion.div>
   );
 }
 
-export default MusicPlayer;
+export default ContextProvider;
