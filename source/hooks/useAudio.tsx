@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 function useAudio() {
-  const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(
+  const [audioElement, setAudioElement] = useState<HTMLVideoElement | null>(
     null
   );
 
   useEffect(() => {
     if (!audioElement) {
       setAudioElement(
-        document.getElementById("netease-audio") as HTMLAudioElement
+        document.getElementById("netease-audio") as HTMLVideoElement
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
