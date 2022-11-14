@@ -2,40 +2,100 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Demo
 
-
+[![CodeFactor](https://www.codefactor.io/repository/github/tohsaka888/react-knowledge-graph/badge?style=flat-square)](https://www.codefactor.io/repository/github/tohsaka888/react-knowledge-graph)
+[![GitHub Release Date](https://img.shields.io/github/release-date/tohsaka888/react-knowledge-graph.svg?style=flat-square)](https://github.com/tohsaka888/react-knowledge-graph/releases)
+[![npm package](https://img.shields.io/npm/v/react-knowledge-graph.svg?style=flat-square)](https://www.npmjs.org/package/react-knowledge-graph)
+[![NPM downloads](http://img.shields.io/npm/dm/react-knowledge-graph.svg?style=flat-square)](https://npmjs.org/package/react-knowledge-graph)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/tohsaka888/react-knowledge-graph/blob/master/LICENSE)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 https://user-images.githubusercontent.com/58759688/201613972-351dd14b-175b-4bf4-8e3f-b9b108768002.mp4
 
+## install
 
-## Getting Started
-
-First, run the development server:
+suggest use `pnpm` to install the package.
 
 ```bash
-npm run dev
+pnpm i netease-music-player
 # or
-yarn dev
+npm i netease-music-player
+# or
+yarn add netease-music-player
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## useage
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```tsx
+<MusicPlayer
+  name={"Beautiful World (Da Capo Version)"}
+  artist={"宇多田ヒカル"}
+  url={"https://music.163.com/song/media/outer/url?id=1824020873.mp3"}
+  picUrl={
+    "https://p2.music.126.net/l3G4LigZnOxFE9lB4bz_LQ==/109951165791860501.jpg?param=34y34"
+  }
+  onCollect={() => {
+    console.log("collected");
+  }}
+  onModeChange={(mode) => {
+    console.log(mode);
+  }}
+  onPictureInPicture={() => {
+    console.log("pip");
+  }}
+  onPlayNext={() => {
+    console.log("play next");
+  }}
+  onPlayPrev={() => {
+    console.log("play prev");
+  }}
+  onShare={() => {
+    console.log("share");
+  }}
+  playlistLength={10}
+/>
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## props
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```ts
+export type ModeProps = "single-cycle" | "list-cycle" | "random";
 
-## Learn More
+export type MusicPlayerProps = {
+  name: string | React.ReactNode;
+  artist: string | React.ReactNode;
+  url: string;
+  autoplay?: boolean;
+  picUrl: string;
+  onPlayNext: () => void;
+  onPlayPrev: () => void;
+  onPictureInPicture: () => void;
+  onCollect: () => void;
+  onShare: () => void;
+  onModeChange: (mode: ModeProps) => void;
+  playlistLength: number;
+};
+```
 
-To learn more about Next.js, take a look at the following resources:
+## develop
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+first, clone this repository.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+git clone https://github.com/tohsaka888/netease-music-player.git
+```
 
-## Deploy on Vercel
+then, install the packages.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm i
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+open the develop server
+
+```bash
+pnpm dev
+```
+
+## license
+
+MIT
