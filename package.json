@@ -1,19 +1,36 @@
 {
   "name": "netease-music-player",
   "version": "0.1.0",
-  "private": true,
+  "description": "Building netease-cloud-music style music player with React",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:commonjs": "npx swc source -C module.type=commonjs -d lib/commonjs --config-file .swcrc",
+    "build:module": "npx swc source -C module.type=es6 -d lib/module --config-file .swcrc",
+    "build:typescript": "npx tsc --project ./tsconfig.typescript.json",
+    "build:package": "pnpm build:commonjs && pnpm build:module && pnpm build:typescript",
+    "publish:package": "pnpm build:package && pnpm publish"
   },
   "dependencies": {
     "framer-motion": "^7.6.6",
     "moment": "^2.29.4",
     "styled-components": "^5.3.6"
   },
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "source": "source/index.tsx",
+  "files": [
+    "lib",
+    "source",
+    "README.md"
+  ],
   "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.3.16",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
@@ -24,5 +41,17 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.8.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tohsaka888/netease-music-player.git"
+  },
+  "keywords": [
+    "knowledge-graph"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tohsaka888/netease-music-player/issues"
+  },
+  "homepage": "https://github.com/tohsaka888/netease-music-player"
 }
