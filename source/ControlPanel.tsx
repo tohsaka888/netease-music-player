@@ -8,13 +8,17 @@ import moment from "moment";
 import {
   ArtistName,
   BufferedSlider,
+  CollectIcon,
   ControlPanelContainer,
   CurrentSlider,
   NextIcon,
+  PictureInPictureIcon,
   PlayIcon,
   PrevIcon,
+  ShareIcon,
   SliderArea,
   SliderDot,
+  SliderIcon,
   SongImage,
   SongName,
   TimeArea,
@@ -24,6 +28,7 @@ import {
 import useAudio from "./hooks/useAudio";
 import { motion, PanInfo } from "framer-motion";
 import { usePlayerProps } from "./controller/PropsController";
+import AddonPanel from "./AddonPanel";
 
 function ControlPanel() {
   const duration = useDuration();
@@ -34,7 +39,16 @@ function ControlPanel() {
   );
   const setCurrentTime = useDispathCurrentTime();
   const sliderRef = useRef<HTMLDivElement>(null!);
-  const { name, artist } = usePlayerProps();
+  const {
+    name,
+    artist,
+    picUrl,
+    onCollect,
+    onPictureInPicture,
+    onPlayNext,
+    onPlayPrev,
+    onShare,
+  } = usePlayerProps();
 
   /**
    * handle drag events
@@ -86,7 +100,11 @@ function ControlPanel() {
 
   return (
     <ControlPanelContainer>
-      <PrevIcon />
+      <PrevIcon
+        onClick={() => {
+          onPlayPrev();
+        }}
+      />
       <PlayIcon
         isPlayed={isPlayed}
         onClick={() => {
@@ -100,12 +118,12 @@ function ControlPanel() {
           }
         }}
       />
-      <NextIcon />
-      <SongImage
-        src={
-          "https://p2.music.126.net/l3G4LigZnOxFE9lB4bz_LQ==/109951165791860501.jpg?param=34y34"
-        }
+      <NextIcon
+        onClick={() => {
+          onPlayNext();
+        }}
       />
+      <SongImage src={picUrl} />
       <WordSliderContainer>
         <WordArea>
           <SongName>{name}</SongName>
@@ -169,6 +187,23 @@ function ControlPanel() {
         <div>/</div>
         <div>{moment(duration * 1000).format("mm:ss")}</div>
       </TimeArea>
+      <PictureInPictureIcon
+        onClick={() => {
+          onPictureInPicture();
+        }}
+      />
+      <CollectIcon
+        onClick={() => {
+          onCollect();
+        }}
+      />
+      <ShareIcon
+        onClick={() => {
+          onShare();
+        }}
+      />
+      <SliderIcon />
+      <AddonPanel />
     </ControlPanelContainer>
   );
 }
