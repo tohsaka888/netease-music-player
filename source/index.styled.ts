@@ -12,7 +12,7 @@ export const MusicPlayerContainer = styled.div`
   zindex: 1;
   display: flex;
   align-items: center;
-  height: 58px;
+  height: 59px;
   min-width: 980px;
 `;
 
@@ -118,7 +118,7 @@ export const SongImage = styled.img`
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  margin-left: 24px;
+  margin-left: 16px;
 `;
 
 export const WordArea = styled.div`
@@ -310,4 +310,11 @@ export const PlaylistIcon = styled.div`
   &:hover {
     background-position: -42px -98px;
   }
+`;
+
+export const VolumeBarBg = styled.div`
+  background: ${() => `url(${staticImage})`};
+  background-position: 0 -503px;
+  width: 100%;
+  height: 100%;
 `;
