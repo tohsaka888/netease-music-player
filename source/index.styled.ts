@@ -317,4 +317,24 @@ export const VolumeBarBg = styled.div`
   background-position: 0 -503px;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+`;
+
+export const VolumeCurrentSlider = styled.div`
+  background: ${() => `url(${staticImage})`};
+  width: 4px;
+  background-position: -40px bottom;
+  position: relative;
+`;
+
+export const VolumeDot = styled.div`
+  background: ${() => `url(${iconImage})`};
+  width: 18px;
+  height: 20px;
+  background-position: -40px -250px;
+  &:hover {
+    background-position: -40px -280px;
+  }
 `;
