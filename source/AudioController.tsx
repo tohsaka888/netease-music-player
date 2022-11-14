@@ -9,8 +9,10 @@ function AudioController() {
   const { url } = usePlayerProps();
   return (
     <>
-      <audio
+      <video
+        controls={false}
         id={"netease-audio"}
+        style={{ display: "none" }}
         onTimeUpdate={({ currentTarget }) => {
           startTransition(() => {
             const bufferedTime = currentTarget.buffered.end(
