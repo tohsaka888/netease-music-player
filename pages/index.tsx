@@ -9,6 +9,25 @@ export default function Home() {
       picUrl={
         "https://p2.music.126.net/l3G4LigZnOxFE9lB4bz_LQ==/109951165791860501.jpg?param=34y34"
       }
+      onCollect={() => {
+        console.log("collected");
+      }}
+      onModeChange={(mode) => {
+        console.log(mode);
+      }}
+      onPictureInPicture={() => {
+        console.log("pip");
+      }}
+      onPlayNext={() => {
+        console.log("play next");
+      }}
+      onPlayPrev={() => {
+        console.log("play prev");
+      }}
+      onShare={() => {
+        console.log("share");
+      }}
+      playlistLength={10}
     />
   );
 }
