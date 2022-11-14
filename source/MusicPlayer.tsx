@@ -14,11 +14,16 @@ import DurationController from "./controller/DurationController";
 import ControlPanel from "./ControlPanel";
 import { MusicPlayerProps } from "./type";
 import PropsController from "./controller/PropsController";
+import VolumeVisivbleController, {
+  useVolumeVisible,
+} from "./controller/VolumeVisivbleController";
 
 function ContextProvider({ children }: { children: React.ReactNode }) {
   return (
     <DurationController>
-      <CurrentTimeController>{children}</CurrentTimeController>
+      <CurrentTimeController>
+        <VolumeVisivbleController>{children}</VolumeVisivbleController>
+      </CurrentTimeController>
     </DurationController>
   );
 }
@@ -26,14 +31,22 @@ function ContextProvider({ children }: { children: React.ReactNode }) {
 function MusicPlayer(props: MusicPlayerProps) {
   const [isActive, setIsActive] = useState<boolean>(false);
   const [isLocked, setIsLocked] = useState<boolean>(false);
+  const volumeVisible = useVolumeVisible();
+
+  console.log(volumeVisible)
 
   const bottom = useMemo(() => {
-    if (isLocked) {
+    if (volumeVisible) {
       return "0px";
     } else {
-      return isActive ? "0px" : "-45px";
+      if (isLocked) {
+        return "0px";
+      } else {
+        return isActive ? "0px" : "-45px";
+      }
     }
-  }, [isLocked, isActive]);
+  }, [volumeVisible, isLocked, isActive]);
+
   return (
     <PropsController {...props}>
       <motion.div
