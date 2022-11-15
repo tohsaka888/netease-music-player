@@ -1,13 +1,13 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Demo
-
 [![CodeFactor](https://www.codefactor.io/repository/github/tohsaka888/netease-music-player/badge?style=flat-square)](https://www.codefactor.io/repository/github/tohsaka888/netease-music-player)
 [![GitHub Release Date](https://img.shields.io/github/release-date/tohsaka888/netease-music-player.svg?style=flat-square)](https://github.com/tohsaka888/netease-music-player/releases)
 [![npm package](https://img.shields.io/npm/v/netease-music-player.svg?style=flat-square)](https://www.npmjs.org/package/netease-music-player)
 [![NPM downloads](http://img.shields.io/npm/dm/netease-music-player.svg?style=flat-square)](https://npmjs.org/package/netease-music-player)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/tohsaka888/netease-music-player/blob/master/LICENSE)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+## Demo
 
 https://user-images.githubusercontent.com/58759688/201613972-351dd14b-175b-4bf4-8e3f-b9b108768002.mp4
 
