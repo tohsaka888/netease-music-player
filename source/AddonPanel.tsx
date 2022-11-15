@@ -9,7 +9,7 @@ import {
   VolumeIcon,
 } from "./index.styled";
 import { ModeProps } from "./type";
-import { AnimatePresence, motion, PanInfo } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   useDispatchVolumeVisible,
   useVolumeVisible,
@@ -28,14 +28,12 @@ function AddonPanel() {
   const dispatchVolume = useDispatchVolume();
 
   const dragEvent = useCallback(
-    (info: Pick<PanInfo, "point">) => {
+    (e: MouseEvent) => {
       startTransition(() => {
         if (audioElement) {
           const currentValue =
             1 -
-            (info.point.y - volumeBarRef.current.getBoundingClientRect().y) /
-              95;
-          console.log(currentValue);
+            (e.clientY - volumeBarRef.current.getBoundingClientRect().y) / 95;
           if (currentValue < 0) {
             audioElement.volume = 0;
           } else if (currentValue > 1) {
@@ -94,8 +92,8 @@ function AddonPanel() {
                   duration: 0,
                 }}
                 dragMomentum={false}
-                onDrag={(_, info) => {
-                  dragEvent(info);
+                onDrag={(e, info) => {
+                  dragEvent(e as MouseEvent);
                 }}
                 dragElastic={0}
                 dragConstraints={{
