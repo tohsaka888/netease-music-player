@@ -1,8 +1,44 @@
+import usePlaylistTracks from "@services/usePlaylistTracks";
 import { MusicPlayer } from "../source";
+import { useMemo, useState } from "react";
 
 export default function Home() {
+  const [pagination, setPagination] = useState<{
+    page: number;
+    pageSize: number;
+  }>({ page: 1, pageSize: 10 });
+  
+  const { data } = usePlaylistTracks({ ...pagination, id: 967418382 });
+
+  const songs = useMemo(() => {
+    return data?.songs || [];
+  }, [data]);
+
   return (
     <div style={{ height: "200vh" }}>
+      {songs.map((song: any) => (
+        <div key={song.id} style={{ display: "flex" }}>
+          <div>{song.name + "--"}</div>
+          <div>{song.id}</div>
+        </div>
+      ))}
+      <div style={{ display: "flex" }}>
+        <button
+          disabled={pagination.page === 1}
+          onClick={() => {
+            setPagination({ ...pagination, page: pagination.page - 1 });
+          }}
+        >
+          Prev Page
+        </button>
+        <button
+          onClick={() => {
+            setPagination({ ...pagination, page: pagination.page + 1 });
+          }}
+        >
+          Next Page
+        </button>
+      </div>
       <MusicPlayer
         name={"Beautiful World (Da Capo Version)"}
         artist={"宇多田ヒカル"}
