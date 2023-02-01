@@ -9,7 +9,7 @@ specifiers:
   '@types/styled-components': ^5.1.26
   eslint: 8.33.0
   eslint-config-next: 13.1.6
-  framer-motion: ^8.0.0
+  framer-motion: ^9.0.0
   moment: ^2.29.4
   next: 13.1.6
   react: 18.2.0
@@ -19,7 +19,7 @@ specifiers:
   typescript: 4.9.5
 
 dependencies:
-  framer-motion: 8.0.0_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 9.0.0_biqbaboplfbrettd7655fr4n2y
   moment: 2.29.4
   styled-components: 5.3.6_biqbaboplfbrettd7655fr4n2y
 
@@ -1460,8 +1460,8 @@ packages:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: true
 
-  /framer-motion/8.0.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-MH5oWf2kBxoMlo8apN/9rAV3GiVgPWOQTW2RES9LxayKUCbdsvcxIvR9AQOD6se8+glWKrnrOhNBvVtOSonFJw==}
+  /framer-motion/9.0.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-nDLVzUlIUNyxD7SbqWpWKBeK1FIP/mDMFNy4yhXjhaRoyvGPcoe3uGYf0cEti+DG64N99Dzaw5kdmVjsxbwlEA==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -1470,7 +1470,7 @@ packages:
       hey-listen: 1.0.8
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      tslib: 2.4.0
+      tslib: 2.4.1
     optionalDependencies:
       '@emotion/is-prop-valid': 0.8.8
     dev: false
@@ -2471,10 +2471,6 @@ packages:
   /tslib/1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
-
-  /tslib/2.4.0:
-    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
-    dev: false
 
   /tslib/2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
