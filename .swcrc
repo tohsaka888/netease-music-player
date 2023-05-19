@@ -15,8 +15,7 @@
       }
     },
     "target": "es2022",
-    "loose": true,
-    "externalHelpers": true
+    "loose": true
   },
   "minify": true,
   "sourceMaps": true,
