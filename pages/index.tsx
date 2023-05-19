@@ -1,5 +1,5 @@
 import usePlaylistTracks from "@services/usePlaylistTracks";
-import { MusicPlayer } from "../source";
+import { MusicPlayer, MusicProps } from "../source";
 import { useMemo, useState } from "react";
 
 export default function Home() {
@@ -10,9 +10,16 @@ export default function Home() {
   
   const { data } = usePlaylistTracks({ ...pagination, id: 967418382 });
 
-  const songs = useMemo(() => {
-    return data?.songs || [];
+  const songs: MusicProps[] = useMemo(() => {
+    return data?.songs.map((song: any) => ({
+      ...song,
+      artist: song.ar.map((ar: any) => ar.name).join(","),
+    })) || [];
   }, [data]);
+
+  const onPlayNext = async () => {
+
+  }
 
   return (
     <div style={{ height: "200vh" }}>
@@ -42,6 +49,7 @@ export default function Home() {
       <MusicPlayer
         name={"Beautiful World (Da Capo Version)"}
         artist={"宇多田ヒカル"}
+        id={songs.length ? songs[0].id : 0}
         url={"https://music.163.com/song/media/outer/url?id=1824020873.mp3"}
         picUrl={
           "https://p2.music.126.net/l3G4LigZnOxFE9lB4bz_LQ==/109951165791860501.jpg?param=34y34"

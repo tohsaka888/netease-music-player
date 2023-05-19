@@ -48,6 +48,8 @@ function ControlPanel() {
     onPlayNext,
     onPlayPrev,
     onShare,
+    playlist,
+    id,
   } = usePlayerProps();
 
   /**
@@ -102,7 +104,14 @@ function ControlPanel() {
     <ControlPanelContainer>
       <PrevIcon
         onClick={() => {
-          onPlayPrev();
+          const currentIndex =
+            playlist?.findIndex((song) => id === song.id) || 0;
+          const prevIndex = playlist
+            ? currentIndex === 0
+              ? playlist.length - 1
+              : currentIndex + 1
+            : -1;
+          onPlayPrev(prevIndex);
         }}
       />
       <PlayIcon
@@ -120,7 +129,14 @@ function ControlPanel() {
       />
       <NextIcon
         onClick={() => {
-          onPlayNext();
+          const currentIndex =
+            playlist?.findIndex((song) => id === song.id) || 0;
+          const nextIndex = playlist
+            ? currentIndex === playlist.length - 1
+              ? 0
+              : currentIndex + 1
+            : -1;
+          onPlayNext(nextIndex);
         }}
       />
       <SongImage src={picUrl} />
