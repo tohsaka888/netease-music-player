@@ -7,7 +7,7 @@ settings:
 dependencies:
   framer-motion:
     specifier: ^11.0.0
-    version: 11.0.25(react-dom@18.2.0)(react@18.2.0)
+    version: 11.0.28(react-dom@18.2.0)(react@18.2.0)
   moment:
     specifier: ^2.29.4
     version: 2.30.1
@@ -1584,8 +1584,8 @@ packages:
       signal-exit: 4.1.0
     dev: true
 
-  /framer-motion@11.0.25(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-mRt7vQGzA7++wTgb+PW1TrlXXgndqR6hCiJ48fXr2X9alte2hPQiAq556HRwDCt0Q5X98MNvcSe4KUa27Gm5Lg==}
+  /framer-motion@11.0.28(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-j/vNYTCH5MX5sY/3dwMs00z1+qAqKX3iIHF762bwqlU814ooD5dDbuj3pA0LmIT5YqyryCkXEb/q+zRblin0lw==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0
