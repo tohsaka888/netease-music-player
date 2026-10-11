@@ -20,10 +20,10 @@ importers:
     devDependencies:
       '@swc/cli':
         specifier: ^0.8.0
-        version: 0.8.1(@swc/core@1.15.33)
+        version: 0.8.1(@swc/core@1.16.17)
       '@swc/core':
         specifier: ^1.3.16
-        version: 1.15.33
+        version: 1.16.17
       '@types/node':
         specifier: 24.12.2
         version: 24.12.2
@@ -564,86 +564,86 @@ packages:
       chokidar:
         optional: true
 
-  '@swc/core-darwin-arm64@1.15.33':
-    resolution: {integrity: sha512-N+L0uXhuO7FIfzqwgxmzv0zIpV0qEp8wPX3QQs2p4atjMoywup2JTeDlXPw+z9pWJGCae3JjM+tZ6myclI+2gA==}
+  '@swc/core-darwin-arm64@1.16.17':
+    resolution: {integrity: sha512-noepgtY2YLGYxmNQAJdJ00z7fbtdfujgtrBeZ7N2GB7hymo/Z8+Cugu+OUJp3pbtzARy5h/g9uKHM5UwhWhwjA==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@swc/core-darwin-x64@1.15.33':
-    resolution: {integrity: sha512-/Il4QHSOhV4FekbsDtkrNmKbsX26oSysvgrRswa/RYOHXAkwXDbB4jaeKq6PsJLSPkzJ2KzQ061gtBnk0vNHfA==}
+  '@swc/core-darwin-x64@1.16.17':
+    resolution: {integrity: sha512-JEr4IXMaG1PsrhhVp3qLAHuuxw6CXxaiUXMq9aCgvPPWpMdsxG60YJc3p1GvZYSBxZt/WCMqheZf+4lMYPoL2g==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [darwin]
 
-  '@swc/core-linux-arm-gnueabihf@1.15.33':
-    resolution: {integrity: sha512-C64hBnBxq4viOPQ8hlx+2lJ23bzZBGnjw7ryALmS+0Q3zHmwO8lw1/DArLENw4Q18/0w5wdEO1k3m1wWNtKGqQ==}
+  '@swc/core-linux-arm-gnueabihf@1.16.17':
+    resolution: {integrity: sha512-IS3QZVwB0WAniJFPIk0fauR86hySJ7Ed8HM61RtvmrixmujOlkQFZnmfbg+x1Cb7TlxWiNsRgUq3MNj04KFJqQ==}
     engines: {node: '>=10'}
     cpu: [arm]
     os: [linux]
 
-  '@swc/core-linux-arm64-gnu@1.15.33':
-    resolution: {integrity: sha512-TRJfnJbX3jqpxRDRoieMzRiCBS5jOmXNb3iQXmcgjFEHKLnAgK1RZRU8Cq1MsPqO4jAJp/ld1G4O3fXuxv85uw==}
+  '@swc/core-linux-arm64-gnu@1.16.17':
+    resolution: {integrity: sha512-U9g6Ibzpn2iLUoa+YNBBmBs4c5DgZMgvAv2+pmc63zL1Vb32pSwZZM/PciIzTKLnEyg5qJAN2N9lo7DJ5zpQ1w==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@swc/core-linux-arm64-musl@1.15.33':
-    resolution: {integrity: sha512-il7tYM+CpUNzieQbwAjFT1P8zqAhmGWNAGhQZBnxurXZ0aNn+5nqYFTEUKNZl7QibtT0uQXzTZrNGHCIj6Y1Og==}
+  '@swc/core-linux-arm64-musl@1.16.17':
+    resolution: {integrity: sha512-rRAleFrN5FzhBxoxMfYyWR+jAvCpsFrKicMSgdICCT/57J33jgW8xArgnTHlZw5TmYr8HxtAM4TBZiG3/f9T+g==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@swc/core-linux-ppc64-gnu@1.15.33':
-    resolution: {integrity: sha512-ZtNBwN0Z7CFj9Il0FcPaKdjgP7URyKu/3RfH46vq+0paOBqLj4NYldD6Qo//Duif/7IOtAraUfDOmp0PLAufog==}
+  '@swc/core-linux-ppc64-gnu@1.16.17':
+    resolution: {integrity: sha512-lQVed3YXKgsCDdS3snv2tbjeJmXWpW9QL3vbvXYNE/2HpSZVe3Abd2gQ9AArK0EDbVHsZ8UwrgP58NsssYeRvQ==}
     engines: {node: '>=10'}
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
 
-  '@swc/core-linux-s390x-gnu@1.15.33':
-    resolution: {integrity: sha512-De1IyajoOmhOYYjw/lx66bKlyDpHZTueqwpDrWgf5O7T6d1ODeJJO9/OqMBmrBQc5C+dNnlmIufHsp4QVCWufA==}
+  '@swc/core-linux-s390x-gnu@1.16.17':
+    resolution: {integrity: sha512-bgmFiMiFF2ezdTsqGfgp99mMrZlGyp5NnZqYQSHmYDlgrtf4OHFT3ZTgtGqFnkVBbQ0UUCyqmEwl3uDGUOVlxA==}
     engines: {node: '>=10'}
     cpu: [s390x]
     os: [linux]
     libc: [glibc]
 
-  '@swc/core-linux-x64-gnu@1.15.33':
-    resolution: {integrity: sha512-mGTH0YxmUN+x6vRN/I6NOk5X0ogNktkwPnJ94IMvR7QjhRDwL0O8RXEDhyUM0YtwWrryBOqaJQBX4zruxEPRGw==}
+  '@swc/core-linux-x64-gnu@1.16.17':
+    resolution: {integrity: sha512-it1yehbWrUY9+ENZ3b7qteI3Qobz1f+XUczSg6WRhfLU59sjoTxO4plcBPTB+Gq7UVfjzzOa1Pe+j0LOJy9eaA==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@swc/core-linux-x64-musl@1.15.33':
-    resolution: {integrity: sha512-hj628ZkSEJf6zMf5VMbYrG2O6QqyTIp2qwY6VlCjvIa9lAEZ5c2lfPblCLVGYubTeLJDxadLB/CxqQYOQABeEQ==}
+  '@swc/core-linux-x64-musl@1.16.17':
+    resolution: {integrity: sha512-Hl54O/DF33g3Bfim/X+8h0zUEqi/+y3kmu6FQRVUdwCf9AZJGmGm4dII3zOoG5fOssz+kWOLRMwa6N/M/PQZXw==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@swc/core-win32-arm64-msvc@1.15.33':
-    resolution: {integrity: sha512-GV2oohtN2/5+KSccl86VULu3aT+LrISC8uzgSq0FRnikpD+Zwc+sBlXmoKQ+Db6jI57ITUOIB8jRkdGMABC29g==}
+  '@swc/core-win32-arm64-msvc@1.16.17':
+    resolution: {integrity: sha512-mB73Ts0vq6kIytnvQkfg5jviw1zICUGEZOMowv3e+TL63dxsE2AcvRcft5ouiA5G3skQ9isimc/R7sOJHCxhpg==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [win32]
 
-  '@swc/core-win32-ia32-msvc@1.15.33':
-    resolution: {integrity: sha512-gtyvzSNR8DHKfFEA2uqb8Ld1myqi6uEg2jyeUq3ikn5ytYs7H8RpZYC8mdy4NXr8hfcdJfCLXPlYaqqfBXpoEQ==}
+  '@swc/core-win32-ia32-msvc@1.16.17':
+    resolution: {integrity: sha512-DLQh6orSAm5EmxMG89lsYOTWPaSpr+rDFigvlDLkklxo03O50k9FClIOOceXOpOe/AJbSx3EiHBziIRB/w0eTw==}
     engines: {node: '>=10'}
     cpu: [ia32]
     os: [win32]
 
-  '@swc/core-win32-x64-msvc@1.15.33':
-    resolution: {integrity: sha512-d6fRqQSkJI+kmMEBWaDQ7TMl8+YjLYbwRUPZQ9DY0ORBJeTzOrG0twvfvlZ2xgw6jA0ScQKgfBm4vHLSLl5Hqg==}
+  '@swc/core-win32-x64-msvc@1.16.17':
+    resolution: {integrity: sha512-w3BZ1XUeSLX98waHVmQGVSBSQX/iifSdtHNgzJYoeqRpSPMgEqC3Goe4pWovBR9w5rtsu6rVcqv1kj25hBECGg==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [win32]
 
-  '@swc/core@1.15.33':
-    resolution: {integrity: sha512-jOlwnFV2xhuuZeAUILGFULeR6vDPfijEJ57evfocwznQldLU3w2cZ9bSDryY9ip+AsM3r1NJKzf47V2NXebkeQ==}
+  '@swc/core@1.16.17':
+    resolution: {integrity: sha512-D/WxLurusHsiHd8FDz9AvCuUJ1W6AXhzmG27/Db1CqCaAAdsan95HMCcTyIzCJfm1m9dAwtSm00DLOZIhCeZAA==}
     engines: {node: '>=10'}
     peerDependencies:
       '@swc/helpers': '>=0.5.17'
@@ -657,8 +657,8 @@ packages:
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
 
-  '@swc/types@0.1.26':
-    resolution: {integrity: sha512-lyMwd7WGgG79RS7EERZV3T8wMdmPq3xwyg+1nmAM64kIhx5yl+juO2PYIHb7vTiPgPCj8LYjsNV2T5wiQHUEaw==}
+  '@swc/types@0.1.28':
+    resolution: {integrity: sha512-V6Mnml8v09QALx6K0elJ7o9K/MkVDtW3t6L+7Ou/JcWtb3xwId2AH4FeOceySd2JaO87IMw4+6vSZxLm34LPbw==}
 
   '@tokenizer/inflate@0.4.1':
     resolution: {integrity: sha512-2mAv+8pkG6GIZiF1kNg1jAjh27IDxEPKwdGul3snfztFerfPGI1LjDezZp3i7BElXompqEtPmoPx6c2wgtWsOA==}
@@ -2781,9 +2781,9 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
-  '@swc/cli@0.8.1(@swc/core@1.15.33)':
+  '@swc/cli@0.8.1(@swc/core@1.16.17)':
     dependencies:
-      '@swc/core': 1.15.33
+      '@swc/core': 1.16.17
       '@swc/counter': 0.1.3
       '@xhmikosr/bin-wrapper': 14.2.2
       commander: 8.3.0
@@ -2798,59 +2798,59 @@ snapshots:
       - react-native-b4a
       - supports-color
 
-  '@swc/core-darwin-arm64@1.15.33':
+  '@swc/core-darwin-arm64@1.16.17':
     optional: true
 
-  '@swc/core-darwin-x64@1.15.33':
+  '@swc/core-darwin-x64@1.16.17':
     optional: true
 
-  '@swc/core-linux-arm-gnueabihf@1.15.33':
+  '@swc/core-linux-arm-gnueabihf@1.16.17':
     optional: true
 
-  '@swc/core-linux-arm64-gnu@1.15.33':
+  '@swc/core-linux-arm64-gnu@1.16.17':
     optional: true
 
-  '@swc/core-linux-arm64-musl@1.15.33':
+  '@swc/core-linux-arm64-musl@1.16.17':
     optional: true
 
-  '@swc/core-linux-ppc64-gnu@1.15.33':
+  '@swc/core-linux-ppc64-gnu@1.16.17':
     optional: true
 
-  '@swc/core-linux-s390x-gnu@1.15.33':
+  '@swc/core-linux-s390x-gnu@1.16.17':
     optional: true
 
-  '@swc/core-linux-x64-gnu@1.15.33':
+  '@swc/core-linux-x64-gnu@1.16.17':
     optional: true
 
-  '@swc/core-linux-x64-musl@1.15.33':
+  '@swc/core-linux-x64-musl@1.16.17':
     optional: true
 
-  '@swc/core-win32-arm64-msvc@1.15.33':
+  '@swc/core-win32-arm64-msvc@1.16.17':
     optional: true
 
-  '@swc/core-win32-ia32-msvc@1.15.33':
+  '@swc/core-win32-ia32-msvc@1.16.17':
     optional: true
 
-  '@swc/core-win32-x64-msvc@1.15.33':
+  '@swc/core-win32-x64-msvc@1.16.17':
     optional: true
 
-  '@swc/core@1.15.33':
+  '@swc/core@1.16.17':
     dependencies:
       '@swc/counter': 0.1.3
-      '@swc/types': 0.1.26
+      '@swc/types': 0.1.28
     optionalDependencies:
-      '@swc/core-darwin-arm64': 1.15.33
-      '@swc/core-darwin-x64': 1.15.33
-      '@swc/core-linux-arm-gnueabihf': 1.15.33
-      '@swc/core-linux-arm64-gnu': 1.15.33
-      '@swc/core-linux-arm64-musl': 1.15.33
-      '@swc/core-linux-ppc64-gnu': 1.15.33
-      '@swc/core-linux-s390x-gnu': 1.15.33
-      '@swc/core-linux-x64-gnu': 1.15.33
-      '@swc/core-linux-x64-musl': 1.15.33
-      '@swc/core-win32-arm64-msvc': 1.15.33
-      '@swc/core-win32-ia32-msvc': 1.15.33
-      '@swc/core-win32-x64-msvc': 1.15.33
+      '@swc/core-darwin-arm64': 1.16.17
+      '@swc/core-darwin-x64': 1.16.17
+      '@swc/core-linux-arm-gnueabihf': 1.16.17
+      '@swc/core-linux-arm64-gnu': 1.16.17
+      '@swc/core-linux-arm64-musl': 1.16.17
+      '@swc/core-linux-ppc64-gnu': 1.16.17
+      '@swc/core-linux-s390x-gnu': 1.16.17
+      '@swc/core-linux-x64-gnu': 1.16.17
+      '@swc/core-linux-x64-musl': 1.16.17
+      '@swc/core-win32-arm64-msvc': 1.16.17
+      '@swc/core-win32-ia32-msvc': 1.16.17
+      '@swc/core-win32-x64-msvc': 1.16.17
 
   '@swc/counter@0.1.3': {}
 
@@ -2858,7 +2858,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@swc/types@0.1.26':
+  '@swc/types@0.1.28':
     dependencies:
       '@swc/counter': 0.1.3
 
@@ -3519,7 +3519,7 @@ snapshots:
       '@next/eslint-plugin-next': 16.2.4
       eslint: 10.3.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.5.2(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.48.1(eslint@10.3.0)(typescript@5.9.3))(eslint@10.3.0))(eslint@10.3.0)
+      eslint-import-resolver-typescript: 3.5.2(eslint-plugin-import@2.32.0)(eslint@10.3.0)
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.48.1(eslint@10.3.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.5.2)(eslint@10.3.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@10.3.0)
       eslint-plugin-react: 7.37.2(eslint@10.3.0)
@@ -3541,7 +3541,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.5.2(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.48.1(eslint@10.3.0)(typescript@5.9.3))(eslint@10.3.0))(eslint@10.3.0):
+  eslint-import-resolver-typescript@3.5.2(eslint-plugin-import@2.32.0)(eslint@10.3.0):
     dependencies:
       debug: 4.4.3
       enhanced-resolve: 5.10.0
@@ -3555,14 +3555,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.48.1(eslint@10.3.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.2(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.48.1(eslint@10.3.0)(typescript@5.9.3))(eslint@10.3.0))(eslint@10.3.0))(eslint@10.3.0):
+  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.48.1(eslint@10.3.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.2)(eslint@10.3.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.48.1(eslint@10.3.0)(typescript@5.9.3)
       eslint: 10.3.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.5.2(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.48.1(eslint@10.3.0)(typescript@5.9.3))(eslint@10.3.0))(eslint@10.3.0)
+      eslint-import-resolver-typescript: 3.5.2(eslint-plugin-import@2.32.0)(eslint@10.3.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3577,7 +3577,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 10.3.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.48.1(eslint@10.3.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.2(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.48.1(eslint@10.3.0)(typescript@5.9.3))(eslint@10.3.0))(eslint@10.3.0))(eslint@10.3.0)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.48.1(eslint@10.3.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.2)(eslint@10.3.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
